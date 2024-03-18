@@ -19,7 +19,7 @@ nav {
     color: white;
     background-color: #285185;
     padding-inline: 15px;
-    position:relative;
+    position: relative;
 }
 
 nav a {
@@ -32,11 +32,11 @@ nav a {
 }
 
 #logo_img {
-    width:100px;
+    width: 100px;
 }
 
 
-#logo > a {
+#logo>a {
     margin: 0;
     padding: 0;
     margin-left: 40px;
@@ -49,7 +49,7 @@ nav a {
     top: 20px
 }
 
-#nav_options > a:hover {
+#nav_options>a:hover {
     font-weight: 600;
     text-shadow: 3px 4px 7px rgba(97, 146, 177, 0.8);
 }
@@ -61,16 +61,57 @@ nav a {
 
 /*navigation css styling ends */
 
-
 header {
-    height: 375px;
-    margin: 20px;
-    
+    text-align: center;
 }
 
+/* login form styling begins */
 
+#login_form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.form-group {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
 
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #285185;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* login form styling endss */
 
 /*footer css styling begins */
 
@@ -84,7 +125,7 @@ footer {
 }
 
 
-footer > div {
+footer>div {
     padding-inline: 20x;
     padding-bottom: 10px;
     width: 80%;
@@ -97,28 +138,28 @@ footer > div {
     text-align: center;
 }
 
-#sub-foot2 > h2 {
+#sub-foot2>h2 {
     text-align: center;
 }
 
-#sub-foot1 nav > a {
+#sub-foot1 nav>a {
     display: block;
-    padding-block: 5px ;
+    padding-block: 5px;
     text-align: justify;
     margin-left: 40px;
 }
 
-#sub-foot1 nav > a:hover {
+#sub-foot1 nav>a:hover {
     font-weight: 600;
-    text-shadow: 3px 4px 7px rgba(81,67,21,0.8)
+    text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8)
 }
 
-#foot_logo a img{
+#foot_logo a img {
     width: 125px;
 }
 
 #logo_line {
-    margin-top:15px;
+    margin-top: 15px;
     font-weight: 500;
 }
 
@@ -132,7 +173,7 @@ footer > div {
 }
 
 #social_network_links {
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 #social_network_links a>img {
@@ -168,7 +209,7 @@ footer > div {
 
     nav {
         display: block;
-        height:auto;
+        height: auto;
         padding-inline: 0;
     }
 
@@ -179,9 +220,9 @@ footer > div {
         margin-block: 5px;
     }
 
-    #logo > a {
+    #logo>a {
         margin-left: 25px;
-    }  
+    }
 
     #nav_options {
         padding-block: 15px;
@@ -193,6 +234,7 @@ footer > div {
         background-color: white;
         border-bottom: 0.75px solid #285185;
     }
+
     /*navbar ends*/
 
 
@@ -208,7 +250,7 @@ footer > div {
         margin: 0;
     }
 
-    #sub-foot1 nav > a {
+    #sub-foot1 nav>a {
         text-align: center;
         color: white;
         margin-left: 0px;
@@ -217,8 +259,8 @@ footer > div {
     .nav_bus_img {
         display: block;
     }
-    
-    
+
+
 
     #sub-foot1 {
         text-align: center;
@@ -228,8 +270,8 @@ footer > div {
         margin-bottom: 0;
     }
 
-    #sub-foot1 nav > a {
-        padding-block: 2px ;
+    #sub-foot1 nav>a {
+        padding-block: 2px;
     }
 
     #sub-foot2 {
@@ -240,10 +282,10 @@ footer > div {
         text-align: center;
     }
 
-    footer > div {
+    footer>div {
         width: 100%;
     }
-    
+
 
 
     #copyright {
@@ -253,5 +295,3 @@ footer > div {
 
     /*footer ends*/
 }
-
-
