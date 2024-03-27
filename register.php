@@ -1,30 +1,53 @@
 <?php
 include 'dbinit.php';
+function validatePassword($password)
+{
+    // Check if password is at least 6 characters long and contains at least one uppercase letter, one lowercase letter, and one number
+    return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/', $password);
+}
+function validateEmail($email)
+{
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+
+$email_error = $password_error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset ($_POST["email"]) && isset ($_POST["password"])) {
+    if (empty ($_POST["email"])) {
+        $email_error = "Email is required";
+    } else {
         $email = $_POST["email"];
-        $password = $_POST["password"];
+        if (!validateEmail($email)) {
+            $email_error = "Invalid email format";
+        }
+    }
 
-        $sql = "SELECT * FROM login_details WHERE EmailId = ? AND Password = ?";
+    if (empty ($_POST["password"])) {
+        $password_error = "Password is required";
+    } else {
+        $password = $_POST["password"];
+        if (!validatePassword($password)) {
+            $password_error = "Password must be at least 6 characters long and contain at least one uppercase letter, one lowercase letter, and one number";
+        }
+    }
+
+    if (empty ($email_error) && empty ($password_error)) {
+        mysqli_select_db($conn, "BOOKSHELF");
+        $sql = "INSERT INTO login_details (EmailId, Password) VALUES (?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "ss", $email, $password);
         mysqli_stmt_execute($stmt);
-        mysqli_stmt_store_result($stmt);
 
-        if (mysqli_stmt_num_rows($stmt) > 0) {
+        if (mysqli_stmt_affected_rows($stmt) > 0) {
             header("Location: products.php");
             exit;
         } else {
-            $error_message = "Invalid username and password combination.";
+            echo "<p>Error: " . mysqli_error($conn) . "</p>";
         }
 
         mysqli_stmt_close($stmt);
-    } else {
-        $error_message = "Please provide both email and password.";
     }
 }
-
 mysqli_close($conn);
 ?>
 <!DOCTYPE html>
@@ -44,49 +67,44 @@ mysqli_close($conn);
             <a href="index.php"><img src="Imgs\logo_img.png" alt="logo image" id="logo_img"></a>
         </span>
         <div id="nav_options">
-            <a href="index.php" >Home</a>
+            <a href="index.php" class="active">Home</a>
             <a href="">Books</a>
             <a href="">About Us</a>
             <a href="">Contact Us</a>
-            <a href="login.php" class="active">Login</a>
-            <p>Admin <a href="Admin.php">Login as Admin</a></p>
-
+            <a href="login.php">Login</a>
         </div>
     </nav>
-    
     <br>
     <main>
-    <h1>Login</h1>
-        <form id="login_form" action="login.php" method="POST">
+    <h1>Register</h1>
+        <form id="register_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+                <span class="error">
+                    <?php echo $email_error; ?>
+                </span>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+                <span class="error">
+                    <?php echo $password_error; ?>
+                </span>
             </div>
-            <div class="error-message">
-                <?php if (isset ($error_message)) { ?>
-                    <p class="error">
-                        <?php echo $error_message; ?>
-                    </p>
-                <?php } ?>
-            </div>
-            <button type="submit">Login</button>
-            <p>Not registered yet? <a href="register.php">Register here</a></p>
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="login.php">Login here</a></p>
         </form>
-
     </main>
     <footer>
         <div id="sub-foot1">
             <h2>Quick links</h2>
             <nav>
-            <a href="index.php" >Home</a>
+            <a href="index.html" >Home</a>
                 <a href="Products.php">Books</a>
                 <a href="about.php">About Us</a>
                 <a href="contact.php">Contact Us</a>
-                <a href="login.php" class="active">Login</a>
+                <a href="login.php">Login</a>
             </nav>
         </div>
         <div id="sub-foot2">
