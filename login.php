@@ -49,6 +49,8 @@ mysqli_close($conn);
             <a href="">About Us</a>
             <a href="">Contact Us</a>
             <a href="login.php" class="active">Login</a>
+            <p>Admin <a href="Admin.php">Login as Admin</a></p>
+
         </div>
     </nav>
     
