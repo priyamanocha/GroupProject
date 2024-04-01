@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap');
-
 body {
     margin: 0;
     padding: 0;
@@ -12,7 +11,7 @@ h1 {
     text-align: center;
     font-weight: 800;
     color: #3164a7;
-    text-shadow: 0.7px 0.9px 2.5px rgba(81, 67, 21, 0.8);
+    text-shadow: 0.7px 0.9px 2.5px rgba(81,67,21,0.8);
 }
 
 h2 {
@@ -68,7 +67,7 @@ nav a {
 }
 
 .active {
-    font-weight: 800;
+    font-weight: 600;
 }
 
 
@@ -96,7 +95,7 @@ header h1 {
     right: 100px;
     top: 105px;
     color: #3164a7;
-    text-shadow: 0.7px 0.9px 2.5px rgba(81, 67, 21, 0.8);
+    text-shadow: 0.7px 0.9px 2.5px rgba(81,67,21,0.8);
 }
 
 
@@ -152,13 +151,12 @@ header button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height:auto;
     background-color: #e1eeff;
     padding: 20px;
 }
 
-#section-2 h2,
-#section-2 a {
+#section-2 h2,#section-2 a {
     flex-basis: 100%;
     text-align: center;
     font-size: 1.8em;
@@ -167,10 +165,10 @@ header button:hover {
 }
 
 
-.card {
-    width: 240px;
-    height: 330px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+.card2 {
+    width:240px;
+    height:330px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.212);
     background: white;
     display: flex;
     border-radius: 20px;
@@ -181,25 +179,25 @@ header button:hover {
     margin-block: 40px;
 }
 
-.card img {
-    width: 240px;
-    height: 330px;
+.card2 img {
+    width:240px;
+    height:330px;
     border-radius: 20px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
-    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.212);
+    cursor:pointer;
     z-index: 10;
     transition: all .4s;
 }
 
-.card:hover img {
+.card2:hover img {
     margin-top: -35px;
 }
 
-.card:hover {
+.card2:hover {
     width: 250px;
 }
 
-.card::before {
+.card2::before {
     content: 'Click on See More to Buy!';
     position: absolute;
     bottom: 5px;
@@ -216,26 +214,20 @@ header button:hover {
     font-size: 1.2rem;
     width: 20%;
     padding-inline: 10px;
-    border: 0;
+    border:0;
     font-family: "Quicksand", sans-serif;
     height: 35px;
 }
 
 #section-2 a button:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+    cursor: pointer; 
 }
+
 
 /*section-2 ends*/
 
 /* contact US start*/
-.container2 {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .card2 {
     background-color: #fff;
     border-radius: 10px;
@@ -243,26 +235,7 @@ header button:hover {
     overflow: hidden;
     margin: 20px auto;
     max-width: 800px;
-    display: flex;
-    /* Use flexbox */
-}
-
-.card-content2 {
-    padding: 20px;
-    flex: 1;
-}
-
-.card-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.card-image img {
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
+    display: flex; /* Use flexbox */
 }
 
 .form {
@@ -301,10 +274,48 @@ button[type="submit"]:hover {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    /* Add this line */
+    justify-content: space-between;
     padding: 20px;
+    width: 100%;
+}
+
+.form-card {
+    width: calc(50% - 20px); 
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    background: white;
+    border-radius: 20px;
+    margin-left: 200px;
+    margin-bottom: 20px; 
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #285185;
+    font-size: 1.5em;
+}
+
+.form-card {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    background: white;
+    border-radius: 20px;
+    margin-right: 280px;
+    margin-bottom: 20px;
+}
+
+.subtitle{
+    text-align: center;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    font-weight: 500;
+
 }
 
 /* login form styling begins */
