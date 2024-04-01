@@ -16,26 +16,25 @@
         </span>
         <div id="nav_options">
             <a href="index.php">Home</a>
-            <a href="products.php" class="active">Books</a>
-            <a href="about.php">About Us</a>
+            <a href="products.php">Books</a>
+            <a href="about.php" class="active">About Us</a>
             <a href="contact.php">Contact Us</a>
             <a href="login.php">Login</a>
         </div>
     </nav>
-    <header>
-        <h1>Products</h1>
-    </header>
-    <main>
 
+    <br>
+    <main>
+        <h1>About Us</h1>
     </main>
     <footer>
         <div id="sub-foot1">
             <h2>Quick links</h2>
             <nav>
                 <a href="index.php">Home</a>
-                <a href="products.php" class="active">Books</a>
+                <a href="products.php">Books</a>
                 <a href="login.php">Login</a>
-                <a href="about.php">About Us</a>
+                <a href="about.php" class="active">About Us</a>
                 <a href="contact.php">Contact Us</a>
             </nav>
         </div>

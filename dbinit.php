@@ -2,20 +2,20 @@
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'WheelyStrongPwd');
 define('DB_HOST', 'localhost');
-define('DB_NAME', '');
+define('DB_NAME', 'thebookshelf');
 
 $conn = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
-    or die ('Could not connect to MySQL: ' . mysqli_connect_error());
+    or die('Could not connect to MySQL: ' . mysqli_connect_error());
 mysqli_set_charset($conn, 'utf8');
 
 // Creating BOOKSHELF Database 
-$sql = "CREATE DATABASE IF NOT EXISTS BOOKSHELF";
+$sql = "CREATE DATABASE IF NOT EXISTS thebookshelf";
 if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error creating database: " . $conn->error;
 }
 
-$conn->select_db('login_details');
+$conn->select_db('thebookshelf');
 
 // Creating login_details Table 
 $table_sql = "CREATE TABLE IF NOT EXISTS login_details (

@@ -2,12 +2,14 @@
 include 'dbinit.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset ($_POST["email"]) && isset ($_POST["password"])) {
+    if (isset($_POST["email"]) && isset($_POST["password"])) {
         $email = $_POST["email"];
         $password = $_POST["password"];
 
         $sql = "SELECT * FROM login_details WHERE EmailId = ? AND Password = ?";
         $stmt = mysqli_prepare($conn, $sql);
+        echo $conn;
+        echo $stmt;
         mysqli_stmt_bind_param($stmt, "ss", $email, $password);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
@@ -44,30 +46,29 @@ mysqli_close($conn);
             <a href="index.php"><img src="Imgs\logo_img.png" alt="logo image" id="logo_img"></a>
         </span>
         <div id="nav_options">
-            <a href="index.php" >Home</a>
-            <a href="">Books</a>
-            <a href="">About Us</a>
-            <a href="">Contact Us</a>
-            <a href="login.php" class="active">Login</a>
+            <a href="index.php">Home</a>
+            <a href="products.php" class="active">Books</a>
+            <a href="about.php">About Us</a>
+            <a href="contact.php">Contact Us</a>
+            <a href="login.php">Login</a>
             <p>Admin <a href="Admin.php">Login as Admin</a></p>
-
         </div>
     </nav>
-    
+
     <br>
     <main>
-    <h1>Login</h1>
+        <h1>Login</h1>
         <form id="login_form" action="login.php" method="POST">
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="text" id="email" name="email">
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password">
             </div>
             <div class="error-message">
-                <?php if (isset ($error_message)) { ?>
+                <?php if (isset($error_message)) { ?>
                     <p class="error">
                         <?php echo $error_message; ?>
                     </p>
@@ -82,11 +83,11 @@ mysqli_close($conn);
         <div id="sub-foot1">
             <h2>Quick links</h2>
             <nav>
-            <a href="index.php" >Home</a>
-                <a href="Products.php">Books</a>
+                <a href="index.php">Home</a>
+                <a href="products.php">Books</a>
+                <a href="login.php" class="active">Login</a>
                 <a href="about.php">About Us</a>
                 <a href="contact.php">Contact Us</a>
-                <a href="login.php" class="active">Login</a>
             </nav>
         </div>
         <div id="sub-foot2">
@@ -98,7 +99,7 @@ mysqli_close($conn);
         </div>
         <div class="sub-foot3">
             <span id="foot_logo">
-                <a href="index.html"><img src="Imgs\logo_img.png" alt="logo_img" id="foot_logo_img"></a>
+                <a href="index.php"><img src="Imgs\logo_img.png" alt="logo_img" id="foot_logo_img"></a>
             </span>
             <p id="logo_line"> Where every page holds a new adventure.</p>
             <div id="social_network_links">

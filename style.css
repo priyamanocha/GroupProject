@@ -12,7 +12,7 @@ h1 {
     text-align: center;
     font-weight: 800;
     color: #3164a7;
-    text-shadow: 0.7px 0.9px 2.5px rgba(81,67,21,0.8);
+    text-shadow: 0.7px 0.9px 2.5px rgba(81, 67, 21, 0.8);
 }
 
 h2 {
@@ -68,7 +68,7 @@ nav a {
 }
 
 .active {
-    font-weight: 600;
+    font-weight: 800;
 }
 
 
@@ -96,7 +96,7 @@ header h1 {
     right: 100px;
     top: 105px;
     color: #3164a7;
-    text-shadow: 0.7px 0.9px 2.5px rgba(81,67,21,0.8);
+    text-shadow: 0.7px 0.9px 2.5px rgba(81, 67, 21, 0.8);
 }
 
 
@@ -152,12 +152,13 @@ header button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height:auto;
+    height: auto;
     background-color: #e1eeff;
     padding: 20px;
 }
 
-#section-2 h2,#section-2 a {
+#section-2 h2,
+#section-2 a {
     flex-basis: 100%;
     text-align: center;
     font-size: 1.8em;
@@ -167,9 +168,9 @@ header button:hover {
 
 
 .card {
-    width:240px;
-    height:330px;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.212);
+    width: 240px;
+    height: 330px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
     background: white;
     display: flex;
     border-radius: 20px;
@@ -181,11 +182,11 @@ header button:hover {
 }
 
 .card img {
-    width:240px;
-    height:330px;
+    width: 240px;
+    height: 330px;
     border-radius: 20px;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.212);
-    cursor:pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    cursor: pointer;
     z-index: 10;
     transition: all .4s;
 }
@@ -215,25 +216,26 @@ header button:hover {
     font-size: 1.2rem;
     width: 20%;
     padding-inline: 10px;
-    border:0;
+    border: 0;
     font-family: "Quicksand", sans-serif;
     height: 35px;
 }
 
 #section-2 a button:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
-    cursor: pointer; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
 }
 
 /*section-2 ends*/
 
 /* contact US start*/
-.container2{
+.container2 {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .card2 {
     background-color: #fff;
     border-radius: 10px;
@@ -241,26 +243,28 @@ header button:hover {
     overflow: hidden;
     margin: 20px auto;
     max-width: 800px;
-    display: flex; /* Use flexbox */
+    display: flex;
+    /* Use flexbox */
 }
 
 .card-content2 {
     padding: 20px;
-    flex: 1; 
+    flex: 1;
 }
 
 .card-image {
-    flex: 1; 
+    flex: 1;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
 }
 
 .card-image img {
     max-width: 100%;
     height: auto;
-    max-height: 100%; 
+    max-height: 100%;
 }
+
 .form {
     max-width: 600px;
     margin: 0 auto;
@@ -298,13 +302,15 @@ button[type="submit"]:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; /* Add this line */
+    align-items: center;
+    /* Add this line */
     padding: 20px;
 }
 
 /* login form styling begins */
 
-#login_form, #register_form {
+#login_form,
+#register_form {
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
@@ -351,13 +357,14 @@ button[type="submit"]:hover {
 }
 
 /* login form styling endss */
+
 /* admin form styling starts */
 .admin {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  
+
 }
 
 .admin-card {
@@ -366,7 +373,7 @@ button[type="submit"]:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
-    
+
 }
 
 .admin-card .subtitle {
