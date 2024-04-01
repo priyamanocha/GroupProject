@@ -29,12 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (empty($errors)) {
-        mysqli_select_db($conn, "BOOKSHELF");
-        $query = "INSERT INTO admin(Book_id, Book_name, Book_Description, Book_Price, Book_Author,Book_Image) VALUES (?,?,?,?,?,?)";
+        mysqli_select_db($conn, "thebookshelf");
+        $query = "INSERT INTO book_details(Book_name, Book_Description, Book_Price, Book_Author,Book_Image) VALUES (?,?,?,?,?)";
 
         $stmt = mysqli_prepare($conn, $query);
 
-        mysqli_stmt_bind_param($stmt, 'ississ', $book_id, $book_name, $book_description, $book_price, $book_author, $uploadImage);
+        mysqli_stmt_bind_param($stmt, 'sssss', $book_name, $book_description, $book_price, $book_author, $uploadImage);
 
         $result = mysqli_stmt_execute($stmt);
 
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <nav>
         <span id="logo">
-            <a href="index.php"><img src="Imgs\logo_img.png" alt="logo image" id="logo_img"></a>
+            <a href="index.php"><img src="Imgs\logo_img.jpeg" alt="logo image" id="logo_img"></a>
         </span>
         <div id="nav_options">
             <a href="index.php" class="active">Home</a>
@@ -95,10 +95,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <h2 class="subtitle">Admin Login</h2>
                     <form class="adminform" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" id="admin_form"
                         enctype="multipart/form-data">
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="bookId" class="form-label">Book Id</label>
                             <input type="text" name="book_id" id="book_id" class="form-input">
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="book_name" class="form-label">Book Name</label>
                             <input type="text" name="book_name" id="book_name" class="form-input"
@@ -142,12 +142,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div id="sub-foot2">
             <h2>Our Speciality</h2>
             <p>Story and literature Books</p>
-            <p>"Elevating your reading experience with curated collections at Shelfscape – your destination for literary
+            <p>"Elevating your reading experience with curated collections at Shelfscape - your destination for literary
                 indulgence."</p>
         </div>
         <div class="sub-foot3">
             <span id="foot_logo">
-                <a href="index.php"><img src="Imgs\logo_img.png" alt="logo_img" id="foot_logo_img"></a>
+                <a href="index.php"><img src="Imgs\logo_img.jpeg" alt="logo_img" id="foot_logo_img"></a>
             </span>
             <p id="logo_line"> Where every page holds a new adventure.</p>
 

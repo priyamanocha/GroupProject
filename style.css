@@ -609,3 +609,30 @@ footer>div {
 .error {
     color: red;
 }
+
+/*styling for products starts*/
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    float: left;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.product-card p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/*styling for products ends*/

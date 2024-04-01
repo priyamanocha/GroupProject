@@ -12,7 +12,7 @@
 
     <nav>
         <span id="logo">
-            <a href="index.php"><img src="Imgs\logo_img.png" alt="logo image" id="logo_img"></a>
+            <a href="index.php"><img src="Imgs\logo_img.jpeg" alt="logo image" id="logo_img"></a>
         </span>
         <div id="nav_options">
             <a href="index.php">Home</a>

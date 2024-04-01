@@ -43,7 +43,7 @@ mysqli_close($conn);
 
     <nav>
         <span id="logo">
-            <a href="index.php"><img src="Imgs\logo_img.png" alt="logo image" id="logo_img"></a>
+            <a href="index.php"><img src="Imgs\logo_img.jpeg" alt="logo image" id="logo_img"></a>
         </span>
         <div id="nav_options">
             <a href="index.php">Home</a>
@@ -51,7 +51,6 @@ mysqli_close($conn);
             <a href="about.php">About Us</a>
             <a href="contact.php">Contact Us</a>
             <a href="login.php">Login</a>
-            <p>Admin <a href="Admin.php">Login as Admin</a></p>
         </div>
     </nav>
 
@@ -76,6 +75,7 @@ mysqli_close($conn);
             </div>
             <button type="submit">Login</button>
             <p>Not registered yet? <a href="register.php">Register here</a></p>
+            <a href="Admin.php">Login as Admin</a>
         </form>
 
     </main>
@@ -99,7 +99,7 @@ mysqli_close($conn);
         </div>
         <div class="sub-foot3">
             <span id="foot_logo">
-                <a href="index.php"><img src="Imgs\logo_img.png" alt="logo_img" id="foot_logo_img"></a>
+                <a href="index.php"><img src="Imgs\logo_img.jpeg" alt="logo_img" id="foot_logo_img"></a>
             </span>
             <p id="logo_line"> Where every page holds a new adventure.</p>
             <div id="social_network_links">

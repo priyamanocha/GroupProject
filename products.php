@@ -12,7 +12,7 @@
 
     <nav>
         <span id="logo">
-            <a href="index.php"><img src="Imgs\logo_img.png" alt="logo image" id="logo_img"></a>
+            <a href="index.php"><img src="Imgs\logo_img.jpeg" alt="logo image" id="logo_img"></a>
         </span>
         <div id="nav_options">
             <a href="index.php">Home</a>
@@ -26,6 +26,45 @@
         <h1>Products</h1>
     </header>
     <main>
+        <?php
+        include 'dbinit.php';
+
+        // Fetch data from the book_details table
+        $sql = "select book_name, book_description, book_price, book_author, uploadImage from book_details";
+        $result = mysqli_query($conn, $sql);
+
+        // Check if any rows are returned
+        if (mysqli_num_rows($result) > 0) {
+            // Output data of each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <div class="product-card">
+                    <?php
+                    // Construct the image path
+                    $image_path = 'Imgs/' . $row['uploadImage'];
+                    ?>
+                    <img src="<?php echo $image_path; ?>" alt="<?php echo $row['book_name']; ?>">
+                    <h2>
+                        <?php echo $row['book_name']; ?>
+                    </h2>
+                    <p>
+                        <?php echo $row['book_description']; ?>
+                    </p>
+                    <p>
+                        <?php echo $row['book_price']; ?>
+                    </p>
+                    <p>
+                        <?php echo $row['book_author']; ?>
+                    </p>
+                </div>
+                <?php
+            }
+        } else {
+            echo "No products found.";
+        }
+
+        mysqli_close($conn);
+        ?>
 
     </main>
     <footer>
@@ -48,7 +87,7 @@
         </div>
         <div class="sub-foot3">
             <span id="foot_logo">
-                <a href="index.php"><img src="Imgs\logo_img.png" alt="logo_img" id="foot_logo_img"></a>
+                <a href="index.php"><img src="Imgs\logo_img.jpeg" alt="logo_img" id="foot_logo_img"></a>
             </span>
             <p id="logo_line"> Where every page holds a new adventure.</p>
             <div id="social_network_links">

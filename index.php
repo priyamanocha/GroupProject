@@ -12,7 +12,7 @@
 
     <nav>
         <span id="logo">
-            <a href="index.php"><img src="Imgs\logo_img.png" alt="logo image" id="logo_img"></a>
+            <a href="index.php"><img src="Imgs\logo_img.jpeg" alt="logo image" id="logo_img"></a>
         </span>
         <div id="nav_options">
             <a href="index.php" class="active">Home</a>
@@ -90,7 +90,7 @@
         <div class="sub-foot3">
 
             <span id="foot_logo">
-                <a href="index.php"><img src="Imgs\logo_img.png" alt="logo_img" id="foot_logo_img"></a>
+                <a href="index.php"><img src="Imgs\logo_img.jpeg" alt="logo_img" id="foot_logo_img"></a>
             </span>
             <p id="logo_line"> Where every page holds a new adventure.</p>
 
